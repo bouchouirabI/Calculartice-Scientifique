@@ -1,0 +1,139 @@
+<html>
+    <head>
+         <meta charset="utf-8">
+        <script>
+          function insert(num){
+              document.form1.textview.value=document.form1.textview.value+num }
+         function resulta(){
+              var eq= document.form1.textview.value
+              if(eq)
+                {
+                    document.form1.textview.value=eval(eq)
+                } 
+          } 
+         function cancel(){
+                   document.form1.textview.value=""
+          }
+         function back(){
+            var eq = document.form1.textview.value
+            if(eq)
+               {
+                   document.form1.textview.value= eq.substring(0,eq.length-1);
+               }
+          }
+          function fcos(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=Math.cos(eq)
+
+          }
+          function fsin(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=Math.sin(eq)
+
+          }
+          function ftan(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=Math.tan(eq)
+
+          }
+          function Racin(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=Math.sqrt(eq)
+          }
+          function fln(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=Math.log(eq)
+          }
+          function fexp(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=Math.exp(eq)
+          }
+          function carre(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=eval(eq)*eval(eq)
+          }
+          function fprt(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=(eval(eq))/100
+          }
+          function fdiv(){
+            var eq= document.form1.textview.value 
+            document.form1.textview.value=1/(eval(eq))
+          }
+          function fn(){
+            var eq= document.form1.textview.value 
+             
+            if(eq<2)
+              {document.form1.textview.value=1}
+            else
+               {
+
+                document.form1.textview.value=(eval(eq)*(eval(eq)+1))/2
+               }  
+
+          }
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Calculartice  Scientifique </h1>
+       
+        <div class="main"> 
+            <form  name ="form1">
+                <input class="textview" name ="textview">
+            </form>
+            <table>
+                <tr>
+                    <td><input class="button" type="button" value="%" onclick="fprt()"></td>
+                    <td><input class="button" type="button" value="x²" onclick="carre()"></td>
+                    <td><input class="button" type="button" value="/x" onclick="fdiv()"></td>
+                    <td><input class="button" type="button" value="sqrt" onclick="Racin()"></td>
+                    <td><input class="button" type="button" value="cos" onclick="fcos()"></td>
+                </tr>
+                <tr>
+                        <td><input class="button" type="button" value="1" onclick="insert(1)"></td>
+                        <td><input class="button" type="button" value="2" onclick="insert(2)"></td>
+                        <td><input class="button" type="button" value="3" onclick="insert(3)"></td>
+                        <td><input class="button" type="button" value="+" onclick="insert('+')"></td>
+                        <td><input class="button" type="button" value="sin" onclick="fsin()"></td>
+                    </tr>
+                <tr>
+                    <td><input class="button" type="button" value="4" onclick="insert(4)"></td>
+                    <td><input class="button" type="button" value="5" onclick="insert(5)"></td>
+                    <td><input class="button" type="button" value="6" onclick="insert(6)"></td>
+                    <td><input class="button" type="button" value="/" onclick="insert('/')"></td>
+                    <td><input class="button" type="button" value="tan" onclick="ftan()"></td>
+                </tr>
+                <tr>
+                    <td><input class="button" type="button" value="7" onclick="insert(7)"></td>
+                    <td><input class="button" type="button" value="8" onclick="insert(8)"></td>
+                    <td><input class="button" type="button" value="9" onclick="insert(9)"></td>
+                    <td><input class="button" type="button" value="*" onclick="insert('*')"></td>
+                    <td><input class="button" type="button" value="ln" onclick="fln()"></td>
+                </tr>
+                <tr>            
+                    <td><input class="button" type="button" value="C" onclick="cancel()"></td>
+                    <td><input class="button" type="button" value="<-" onclick="back()"></td>
+                    <td><input class="button" type="button" value="-" onclick="insert('-')"></td>
+                    <td rowspan="5"><input type="button" style=" width: 60;
+                        height: 120; font-family: Cursive;color: #3d3c3c;
+                        font-size: 25;
+                        margin: 2;
+                        cursor: pointer;
+                        border-radius: 20px;" value="=" onclick="resulta()"></td>
+                    <td><input class="button" type="button" value="exp" onclick="fexp()"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input  type="button"  Style=" width: 140;
+                        height: 60; font-family: Cursive;color: #3d3c3c;
+                        font-size: 25;
+                        margin: 2;
+                        cursor: pointer;
+                        border-radius: 20px;" value="0" onclick="insert(0)"></td>
+                    <td ><input class="button" type="button" value="." onclick="insert('.')"></td>
+                    <td><input class="button" type="button" value="n! " onclick="fn()"></td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
